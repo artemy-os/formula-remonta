@@ -35,6 +35,9 @@ jobs:
 
       - name: Build static site
         run: npm run build:pages
+        env:
+          PAGES_BASE_PATH: /formula-remonta
+          NEXT_PUBLIC_BASE_PATH: /formula-remonta
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
