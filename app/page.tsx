@@ -2,6 +2,12 @@
 
 import { FormEvent, useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function assetPath(path: string) {
+  return `${basePath}${path}`;
+}
+
 const services = [
   {
     number: "01",
@@ -25,7 +31,7 @@ const services = [
   },
 ];
 
-const process = [
+const processSteps = [
   ["01", "Заявка", "Обсуждаем объект, задачи и ваши ожидания."],
   ["02", "Расчёт", "Фиксируем состав работ и прозрачную смету."],
   ["03", "Реализация", "Организуем стройку и контролируем каждый этап."],
@@ -69,7 +75,7 @@ function BrandLogo() {
   return (
     <img
       className="brand-original"
-      src="/images/logo-approved-horizontal.png"
+      src={assetPath("/images/logo-approved-horizontal.png")}
       alt=""
       aria-hidden="true"
     />
@@ -147,7 +153,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <img src="/images/hero-interior-clean.png" alt="Современный интерьер гостиной" />
+        <img src={assetPath("/images/hero-interior-clean.png")} alt="Современный интерьер гостиной" />
         <div className="hero-shade" />
         <div className="hero-content">
           <p className="eyebrow light">ТОЧНОСТЬ · НАДЁЖНОСТЬ · КОМФОРТ</p>
@@ -236,7 +242,7 @@ export default function Home() {
           <h2>Понятный путь<br />к готовому интерьеру</h2>
         </div>
         <div className="process-grid">
-          {process.map(([number, title, text]) => (
+          {processSteps.map(([number, title, text]) => (
             <article key={number}>
               <span>{number}</span>
               <h3>{title}</h3>
@@ -247,7 +253,7 @@ export default function Home() {
       </section>
 
       <section className="visual-showcase">
-        <img src="/images/project-bathroom-finished.png" alt="Интерьер ванной комнаты с декоративной штукатуркой, линейным сливным трапом и ванной с переливом" />
+        <img src={assetPath("/images/project-bathroom-finished.png")} alt="Интерьер ванной комнаты с декоративной штукатуркой, линейным сливным трапом и ванной с переливом" />
       </section>
 
       <section className="estimate" id="estimate">

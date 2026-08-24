@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://formularem.ru"),
   title: "Формула ремонта — создание пространства для вашего комфорта",
@@ -30,8 +32,8 @@ export const metadata: Metadata = {
       "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
+    shortcut: `${basePath}/favicon.svg`,
   },
 };
 
