@@ -46,7 +46,7 @@ img {
   z-index: 20;
   height: 100px;
   display: grid;
-  grid-template-columns: 260px 1fr auto;
+  grid-template-columns: 315px 1fr auto;
   align-items: center;
   gap: 40px;
   padding: 0 5vw;
@@ -61,22 +61,15 @@ img {
 }
 
 .brand-original {
-  position: relative;
   display: block;
-  width: 240px;
-  aspect-ratio: 4 / 1;
-  overflow: hidden;
-  background: white;
+  width: 305px;
+  max-width: 100%;
 }
 
 .brand-original img {
-  position: absolute;
-  width: 145%;
-  max-width: none;
+  display: block;
+  width: 100%;
   height: auto;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .nav {
@@ -787,7 +780,7 @@ footer > span {
   }
 
   .brand-original {
-    width: 205px;
+    width: min(245px, 66vw);
   }
 
   .menu-button {
