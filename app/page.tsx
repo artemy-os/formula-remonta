@@ -75,7 +75,7 @@ function BrandLogo() {
   return (
     <span className="brand-original">
       <img
-        src={assetPath("/images/logo-workshop-horizontal.png")}
+        src={assetPath("/images/logo-workshop-dark.svg")}
         alt="Мастерская ремонта"
       />
     </span>
