@@ -42,7 +42,7 @@ const organizationData = {
   "@type": "HomeAndConstructionBusiness",
   name: "Формула ремонта",
   url: "https://formularem.ru/",
-  logo: "https://formularem.ru/images/logo-approved-horizontal.png",
+  logo: "https://formularem.ru/images/logo-workshop-horizontal.png",
   email: "mail@formularem.ru",
   areaServed: ["Москва", "Московская область"],
   description:

@@ -61,11 +61,22 @@ img {
 }
 
 .brand-original {
+  position: relative;
   display: block;
   width: 240px;
+  aspect-ratio: 4 / 1;
+  overflow: hidden;
+  background: white;
+}
+
+.brand-original img {
+  position: absolute;
+  width: 145%;
+  max-width: none;
   height: auto;
-  object-fit: contain;
-  filter: invert(1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .nav {

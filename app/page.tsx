@@ -73,12 +73,12 @@ const workTypes = [
 
 function BrandLogo() {
   return (
-    <img
-      className="brand-original"
-      src={assetPath("/images/logo-approved-horizontal.png")}
-      alt=""
-      aria-hidden="true"
-    />
+    <span className="brand-original">
+      <img
+        src={assetPath("/images/logo-workshop-horizontal.png")}
+        alt="Мастерская ремонта"
+      />
+    </span>
   );
 }
 
@@ -127,7 +127,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Формула ремонта — на главную">
+        <a className="brand" href="#top" aria-label="Мастерская ремонта — на главную">
           <BrandLogo />
         </a>
 
@@ -332,7 +332,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top" aria-label="Формула ремонта — наверх">
+        <a className="brand footer-brand" href="#top" aria-label="Мастерская ремонта — наверх">
           <BrandLogo />
         </a>
         <p>Создаём пространство для вашего комфорта.</p>
