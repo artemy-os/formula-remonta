@@ -46,7 +46,7 @@ img {
   z-index: 20;
   height: 100px;
   display: grid;
-  grid-template-columns: 315px 1fr auto;
+  grid-template-columns: 260px 1fr auto;
   align-items: center;
   gap: 40px;
   padding: 0 5vw;
@@ -62,14 +62,10 @@ img {
 
 .brand-original {
   display: block;
-  width: 305px;
-  max-width: 100%;
-}
-
-.brand-original img {
-  display: block;
-  width: 100%;
+  width: 240px;
   height: auto;
+  object-fit: contain;
+  filter: none;
 }
 
 .nav {
@@ -780,7 +776,7 @@ footer > span {
   }
 
   .brand-original {
-    width: min(245px, 66vw);
+    width: 205px;
   }
 
   .menu-button {
