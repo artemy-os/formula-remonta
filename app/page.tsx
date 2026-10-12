@@ -106,7 +106,7 @@ export default function Home() {
     setSendError("");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/mail@formularem.ru", {
+      const response = await fetch("https://formsubmit.co/ajax/mail@master-rem.com", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -122,7 +122,7 @@ export default function Home() {
       setSent(true);
     } catch {
       setSendError(
-        "Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на mail@formularem.ru.",
+        "Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на mail@master-rem.com.",
       );
     } finally {
       setSending(false);
@@ -272,7 +272,7 @@ export default function Home() {
           <div className="contact-note">
             <span>РАБОТАЕМ</span>
             <strong>Москва и Московская область</strong>
-            <a className="contact-email" href="mailto:mail@formularem.ru">mail@formularem.ru</a>
+            <a className="contact-email" href="mailto:mail@master-rem.com">mail@master-rem.com</a>
           </div>
         </div>
 
@@ -343,7 +343,7 @@ export default function Home() {
         <p>Создаём пространство для вашего комфорта.</p>
         <div>
           <a href="#services">Услуги</a>
-          <a href="mailto:mail@formularem.ru">mail@formularem.ru</a>
+          <a href="mailto:mail@master-rem.com">mail@master-rem.com</a>
         </div>
         <span>© 2026 Формула ремонта</span>
       </footer>
