@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://formularem.ru/sitemap.xml",
-    host: "https://formularem.ru",
+    sitemap: "https://master-rem.com/sitemap.xml",
+    host: "https://master-rem.com",
   };
 }
