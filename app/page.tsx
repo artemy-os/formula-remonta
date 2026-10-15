@@ -84,27 +84,6 @@ const projects = [
     description: "Косметический ремонт коммерческого помещения рядом с метро «Курская». Фотографии и подробности появятся после завершения этапов работ.",
     className: "project-in-progress project-in-progress-accent",
   },
-  {
-    category: "КВАРТИРА",
-    title: "Современный интерьер",
-    description: "Реализация жилого пространства с вниманием к деталям, свету и функциональности.",
-    image: "/images/project-bathroom-finished.png",
-    alt: "Современный интерьер ванной комнаты",
-  },
-  {
-    category: "САНУЗЕЛ",
-    title: "Отделка ванной комнаты",
-    description: "Продуманная инженерия и чистовая отделка в едином стиле.",
-    image: "/images/project-bathroom-drain.png",
-    alt: "Деталь отделки ванной комнаты",
-  },
-  {
-    category: "КУХНЯ-ГОСТИНАЯ",
-    title: "Пространство для жизни",
-    description: "Функциональная зона для ежедневного комфорта.",
-    image: "/images/project-kitchen.png",
-    alt: "Интерьер кухни-гостиной",
-  },
 ];
 
 function BrandLogo() {
@@ -241,7 +220,7 @@ export default function Home() {
             <h2 id="projects-title">Проекты</h2>
           </div>
           <p className="projects-copy">
-            Текущие и завершённые объекты — от первых решений до готового пространства.
+            Объекты, над которыми наша команда работает сейчас.
           </p>
         </div>
         <div className="project-grid">
