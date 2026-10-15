@@ -71,6 +71,31 @@ const workTypes = [
   },
 ];
 
+const projects = [
+  {
+    category: "КВАРТИРА",
+    title: "Современный интерьер",
+    description: "Реализация жилого пространства с вниманием к деталям, свету и функциональности.",
+    image: "/images/project-bathroom-finished.png",
+    alt: "Современный интерьер ванной комнаты",
+    className: "project-1",
+  },
+  {
+    category: "САНУЗЕЛ",
+    title: "Отделка ванной комнаты",
+    description: "Продуманная инженерия и чистовая отделка в едином стиле.",
+    image: "/images/project-bathroom-drain.png",
+    alt: "Деталь отделки ванной комнаты",
+  },
+  {
+    category: "КУХНЯ-ГОСТИНАЯ",
+    title: "Пространство для жизни",
+    description: "Функциональная зона для ежедневного комфорта.",
+    image: "/images/project-kitchen.png",
+    alt: "Интерьер кухни-гостиной",
+  },
+];
+
 function BrandLogo() {
   return (
     <img
@@ -107,6 +132,7 @@ export default function Home() {
           <a href="#about" onClick={() => setMenuOpen(false)}>О компании</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Услуги</a>
           <a href="#work-types" onClick={() => setMenuOpen(false)}>Виды работ</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Реализация</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>Процесс</a>
         </nav>
 
@@ -197,6 +223,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="projects" id="projects" aria-labelledby="projects-title">
+        <div className="projects-head">
+          <div>
+            <p className="eyebrow">РЕАЛИЗАЦИЯ</p>
+            <h2 id="projects-title">Проекты</h2>
+          </div>
+          <p className="projects-copy">
+            Реализованные объекты — от первых решений до готового пространства.
+          </p>
+        </div>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <article className={`project-card ${project.className ?? ""}`} key={project.title}>
+              <img src={assetPath(project.image)} alt={project.alt} />
+              <div className="project-overlay">
+                <p>{project.category}</p>
+                <h3>{project.title}</h3>
+                <span>{project.description}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section process" id="process">
         <div className="section-heading">
           <p className="eyebrow">ПРОЦЕСС</p>
@@ -239,6 +289,7 @@ export default function Home() {
         <p>Создаём пространство для вашего комфорта.</p>
         <div>
           <a href="#services">Услуги</a>
+          <a href="#projects">Проекты</a>
         </div>
         <span>© 2026 Формула ремонта</span>
       </footer>
