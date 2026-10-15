@@ -451,8 +451,26 @@ h1 {
   background: #d4d2ce;
 }
 
-.project-1 {
+.project-in-progress {
   grid-row: span 2;
+  background: #32322f;
+}
+
+.project-in-progress .project-overlay {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(145deg, #585851, #252524);
+}
+
+.project-in-progress .project-overlay::before {
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin-bottom: auto;
+  background: rgb(255 255 255 / 42%);
+  content: "";
 }
 
 .project-card img {
