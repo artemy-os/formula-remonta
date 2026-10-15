@@ -76,12 +76,16 @@ const projects = [
     category: "В РАБОТЕ",
     title: "ЖК Новое Летово",
     description: "Ремонт квартиры. Фотографии и подробности проекта появятся после завершения этапов работ.",
+    image: undefined,
+    alt: "",
     className: "project-in-progress",
   },
   {
     category: "В РАБОТЕ",
     title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
     description: "Косметический ремонт коммерческого помещения рядом с метро «Курская». Фотографии и подробности появятся после завершения этапов работ.",
+    image: undefined,
+    alt: "",
     className: "project-in-progress project-in-progress-accent",
   },
 ];
