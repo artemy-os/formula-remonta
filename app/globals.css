@@ -525,8 +525,7 @@ h1 {
 
 .estimate {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 10vw;
+  grid-template-columns: minmax(0, 640px);
   padding: 130px 9vw;
   background: var(--fog);
 }
@@ -556,141 +555,6 @@ h1 {
 .contact-note strong {
   font-size: 14px;
   font-weight: 520;
-}
-
-.contact-email {
-  width: fit-content;
-  margin-top: 10px;
-  padding-bottom: 5px;
-  font-size: 14px;
-  font-weight: 520;
-  border-bottom: 1px solid currentColor;
-  transition: opacity .2s ease;
-}
-
-.contact-email:hover {
-  opacity: .55;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding: 48px;
-  background: white;
-}
-
-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.honeypot {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-form label > span {
-  color: #777771;
-  font-size: 10px;
-  letter-spacing: .1em;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 10px 0 14px;
-  color: var(--ink);
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #c8c8c3;
-  border-radius: 0;
-  outline: none;
-  font-size: 15px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-bottom-color: var(--ink);
-}
-
-textarea {
-  resize: vertical;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.privacy {
-  margin: -12px 0 0;
-  color: #888883;
-  font-size: 9px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.form-error {
-  margin: -10px 0 0;
-  color: #9d3029;
-  font-size: 11px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-form .button:disabled {
-  cursor: wait;
-  opacity: .62;
-}
-
-.success-message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 520px;
-  padding: 60px;
-  background: white;
-}
-
-.success-message > span {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  margin-bottom: 38px;
-  color: white;
-  background: var(--ink);
-  border-radius: 50%;
-}
-
-.success-message h3 {
-  margin-bottom: 16px;
-  font-size: 34px;
-  font-weight: 520;
-}
-
-.success-message p {
-  max-width: 480px;
-  color: #666661;
-  line-height: 1.6;
-}
-
-.success-message button {
-  margin-top: 20px;
-  padding: 0 0 7px;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid;
-  cursor: pointer;
 }
 
 footer {
@@ -951,17 +815,6 @@ footer > span {
 
   .estimate {
     grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  form {
-    margin: 0 -6px;
-    padding: 30px 22px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 25px;
   }
 
   footer {
