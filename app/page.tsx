@@ -73,12 +73,17 @@ const workTypes = [
 
 const projects = [
   {
+    category: "В РАБОТЕ",
+    title: "ЖК Новое Летово",
+    description: "Ремонт квартиры. Фотографии и подробности проекта появятся после завершения этапов работ.",
+    className: "project-in-progress",
+  },
+  {
     category: "КВАРТИРА",
     title: "Современный интерьер",
     description: "Реализация жилого пространства с вниманием к деталям, свету и функциональности.",
     image: "/images/project-bathroom-finished.png",
     alt: "Современный интерьер ванной комнаты",
-    className: "project-1",
   },
   {
     category: "САНУЗЕЛ",
@@ -230,13 +235,13 @@ export default function Home() {
             <h2 id="projects-title">Проекты</h2>
           </div>
           <p className="projects-copy">
-            Реализованные объекты — от первых решений до готового пространства.
+            Текущие и завершённые объекты — от первых решений до готового пространства.
           </p>
         </div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className={`project-card ${project.className ?? ""}`} key={project.title}>
-              <img src={assetPath(project.image)} alt={project.alt} />
+              {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
               <div className="project-overlay">
                 <p>{project.category}</p>
                 <h3>{project.title}</h3>
