@@ -79,6 +79,12 @@ const projects = [
     className: "project-in-progress",
   },
   {
+    category: "В РАБОТЕ",
+    title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
+    description: "Косметический ремонт коммерческого помещения рядом с метро «Курская». Фотографии и подробности появятся после завершения этапов работ.",
+    className: "project-in-progress project-in-progress-accent",
+  },
+  {
     category: "КВАРТИРА",
     title: "Современный интерьер",
     description: "Реализация жилого пространства с вниманием к деталям, свету и функциональности.",
