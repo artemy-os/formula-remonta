@@ -5,7 +5,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://master-rem.com"),
-  title: "Формула ремонта — создание пространства для вашего комфорта",
+  title: "Мастерская ремонта — создание пространства для вашего комфорта",
   description:
     "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
   alternates: {
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: "/",
-    siteName: "Формула ремонта",
-    title: "Формула ремонта — создание пространства для вашего комфорта",
+    siteName: "Мастерская ремонта",
+    title: "Мастерская ремонта — создание пространства для вашего комфорта",
     description:
       "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 const organizationData = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  name: "Формула ремонта",
+  name: "Мастерская ремонта",
   url: "https://master-rem.com/",
   logo: "https://master-rem.com/images/logo-approved-horizontal.png",
   areaServed: ["Москва", "Московская область"],
