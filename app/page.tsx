@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -21,23 +21,18 @@ const services = [
   },
   {
     number: "03",
-    title: "Коммерческие объекты",
-    text: "Ремонт офисов, магазинов и других коммерческих помещений с учётом задач бизнеса.",
-  },
-  {
-    number: "04",
     title: "Дизайн и проектирование",
     text: "Планировка, рабочая документация и визуальная система будущего пространства.",
   },
   {
-    number: "05",
+    number: "04",
     title: "Комплектация, контроль, сопровождение объекта",
     text: "Материалы, подрядчики и качество исполнения под единым управлением.",
   },
 ];
 
 const processSteps = [
-  ["01", "Заявка", "Обсуждаем объект, задачи и ваши ожидания."],
+  ["01", "Обсуждение проекта", "Определяем задачи, объём работ и ваши ожидания."],
   ["02", "Расчёт", "Фиксируем состав работ и прозрачную смету."],
   ["03", "Реализация", "Организуем стройку и контролируем каждый этап."],
   ["04", "Результат", "Сдаём чистое, готовое к жизни пространство."],
@@ -78,61 +73,22 @@ const workTypes = [
 
 function BrandLogo() {
   return (
-    <span className="brand-original">
-      <img
-        src={assetPath("/images/logo-workshop-dark.svg")}
-        alt="Мастерская ремонта"
-      />
-    </span>
+    <img
+      className="brand-original"
+      src={assetPath("/images/logo-approved-horizontal.png")}
+      alt=""
+      aria-hidden="true"
+    />
   );
 }
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [sendError, setSendError] = useState("");
-
-  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    formData.append("_subject", "Новая заявка с сайта «Формула ремонта»");
-    formData.append("_template", "table");
-    formData.append("_url", window.location.href);
-
-    setSending(true);
-    setSendError("");
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/mail@master-rem.com", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      form.reset();
-      setSent(true);
-    } catch {
-      setSendError(
-        "Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на mail@master-rem.com.",
-      );
-    } finally {
-      setSending(false);
-    }
-  }
 
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Мастерская ремонта — на главную">
+        <a className="brand" href="#top" aria-label="Формула ремонта — на главную">
           <BrandLogo />
         </a>
 
@@ -154,7 +110,7 @@ export default function Home() {
           <a href="#process" onClick={() => setMenuOpen(false)}>Процесс</a>
         </nav>
 
-        <a className="header-cta" href="#estimate">Рассчитать стоимость</a>
+        <a className="header-cta" href="#services">Наши услуги</a>
       </header>
 
       <section className="hero" id="top">
@@ -168,7 +124,7 @@ export default function Home() {
             предсказуемый результат.
           </p>
           <div className="hero-actions">
-            <a className="button button-light" href="#estimate">Рассчитать стоимость</a>
+            <a className="button button-light" href="#services">Наши услуги</a>
             <a className="text-link light-link" href="#process">Как мы работаем <span>↓</span></a>
           </div>
         </div>
@@ -261,89 +217,28 @@ export default function Home() {
         <img src={assetPath("/images/project-bathroom-finished.png")} alt="Интерьер ванной комнаты с декоративной штукатуркой, линейным сливным трапом и ванной с переливом" />
       </section>
 
-      <section className="estimate" id="estimate">
+      <section className="estimate" aria-labelledby="consultation-title">
         <div className="estimate-intro">
-          <p className="eyebrow">НАЧАТЬ ПРОЕКТ</p>
-          <h2>Получите формулу<br />вашего ремонта</h2>
+          <p className="eyebrow">ПЛАНИРОВАНИЕ РЕМОНТА</p>
+          <h2 id="consultation-title">Продуманный подход<br />к каждому объекту</h2>
           <p>
-            Расскажите немного об объекте. Мы свяжемся с вами, уточним детали и
-            подготовим предварительный расчёт.
+            На сайте временно не принимаются заявки и не собираются персональные
+            данные. Информация об услугах обновляется.
           </p>
           <div className="contact-note">
-            <span>РАБОТАЕМ</span>
+            <span>ГЕОГРАФИЯ РАБОТ</span>
             <strong>Москва и Московская область</strong>
-            <a className="contact-email" href="mailto:mail@master-rem.com">mail@master-rem.com</a>
           </div>
         </div>
-
-        {sent ? (
-          <div className="success-message" role="status">
-            <span>✓</span>
-            <h3>Заявка отправлена</h3>
-            <p>
-              Спасибо! Мы получили ваши данные и свяжемся с вами, чтобы уточнить
-              детали проекта.
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                setSent(false);
-                setSendError("");
-              }}
-            >
-              Отправить ещё одну заявку
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={submitEstimate}>
-            <label className="honeypot" aria-hidden="true">
-              <span>Не заполняйте это поле</span>
-              <input name="_honey" tabIndex={-1} autoComplete="off" />
-            </label>
-            <label>
-              <span>Ваше имя</span>
-              <input name="Имя" required placeholder="Как к вам обращаться" />
-            </label>
-            <label>
-              <span>Телефон</span>
-              <input name="Телефон" required inputMode="tel" placeholder="+7 999 000-00-00" />
-            </label>
-            <div className="form-row">
-              <label>
-                <span>Площадь, м²</span>
-                <input name="Площадь" inputMode="numeric" placeholder="72" />
-              </label>
-              <label>
-                <span>Тип объекта</span>
-                <select name="Тип объекта" defaultValue="">
-                  <option value="" disabled>Выберите</option>
-                  <option>Квартира</option>
-                  <option>Дом</option>
-                  <option>Коммерческое помещение</option>
-                </select>
-              </label>
-            </div>
-            <label>
-              <span>Комментарий</span>
-              <textarea name="Комментарий" rows={3} placeholder="Коротко о задаче" />
-            </label>
-            <button className="button button-dark" type="submit" disabled={sending}>
-              {sending ? "Отправляем…" : "Получить расчёт"}
-            </button>
-            {sendError && <p className="form-error" role="alert">{sendError}</p>}
-            <p className="privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
-          </form>
-        )}
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top" aria-label="Мастерская ремонта — наверх">
+        <a className="brand footer-brand" href="#top" aria-label="Формула ремонта — наверх">
           <BrandLogo />
         </a>
         <p>Создаём пространство для вашего комфорта.</p>
         <div>
           <a href="#services">Услуги</a>
-          <a href="mailto:mail@master-rem.com">mail@master-rem.com</a>
         </div>
         <span>© 2026 Формула ремонта</span>
       </footer>
