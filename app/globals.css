@@ -473,6 +473,14 @@ h1 {
   content: "";
 }
 
+.project-in-progress-accent {
+  background: #8d826e;
+}
+
+.project-in-progress-accent .project-overlay {
+  background: linear-gradient(145deg, #a99a82, #564d41);
+}
+
 .project-card img {
   height: 100%;
   object-fit: cover;
