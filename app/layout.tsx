@@ -4,7 +4,7 @@ import "./globals.css";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://masterrem.com"),
+  metadataBase: new URL("https://master-rem.com"),
   title: "Формула ремонта — создание пространства для вашего комфорта",
   description:
     "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
@@ -41,9 +41,8 @@ const organizationData = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   name: "Формула ремонта",
-  url: "https://masterrem.com/",
-  logo: "https://masterrem.com/images/logo-workshop-horizontal.png",
-  email: "mail@master-rem.com",
+  url: "https://master-rem.com/",
+  logo: "https://master-rem.com/images/logo-approved-horizontal.png",
   areaServed: ["Москва", "Московская область"],
   description:
     "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
