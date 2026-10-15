@@ -107,7 +107,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Формула ремонта — на главную">
+        <a className="brand" href="#top" aria-label="Мастерская ремонта — на главную">
           <BrandLogo />
         </a>
 
@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top" aria-label="Формула ремонта — наверх">
+        <a className="brand footer-brand" href="#top" aria-label="Мастерская ремонта — наверх">
           <BrandLogo />
         </a>
         <p>Создаём пространство для вашего комфорта.</p>
@@ -285,7 +285,7 @@ export default function Home() {
           <a href="#services">Услуги</a>
           <a href="#projects">Проекты</a>
         </div>
-        <span>© 2026 Формула ремонта</span>
+        <span>© 2026 Мастерская ремонта</span>
       </footer>
     </main>
   );
