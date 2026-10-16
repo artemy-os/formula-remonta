@@ -71,7 +71,7 @@ const workTypes = [
   },
 ];
 
-const projects = [
+const currentProjects = [
   {
     category: "В РАБОТЕ",
     title: "ЖК Новое Летово",
@@ -97,6 +97,8 @@ const projects = [
     className: "project-in-progress",
   },
 ];
+
+const completedProjects: typeof currentProjects = [];
 
 function BrandLogo() {
   return (
@@ -235,17 +237,36 @@ export default function Home() {
             Объекты, над которыми наша команда работает сейчас.
           </p>
         </div>
-        <div className="project-grid">
-          {projects.map((project) => (
-            <article className={`project-card ${project.className ?? ""}`} key={project.title}>
-              {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
-              <div className="project-overlay">
-                <p>{project.category}</p>
-                <h3>{project.title}</h3>
-                <span>{project.description}</span>
-              </div>
-            </article>
-          ))}
+        <div className="projects-group">
+          <h3 className="projects-group-title">В работе</h3>
+          <div className="project-grid">
+            {currentProjects.map((project) => (
+              <article className={`project-card ${project.className ?? ""}`} key={project.title}>
+                {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
+                <div className="project-overlay">
+                  <p>{project.category}</p>
+                  <h3>{project.title}</h3>
+                  <span>{project.description}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="projects-group projects-group-completed">
+          <h3 className="projects-group-title">Завершённые</h3>
+          <div className="project-grid">
+            {completedProjects.map((project) => (
+              <article className={`project-card ${project.className ?? ""}`} key={project.title}>
+                {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
+                <div className="project-overlay">
+                  <p>{project.category}</p>
+                  <h3>{project.title}</h3>
+                  <span>{project.description}</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
