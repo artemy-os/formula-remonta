@@ -88,6 +88,14 @@ const projects = [
     alt: "",
     className: "project-in-progress project-in-progress-accent",
   },
+  {
+    category: "В РАБОТЕ",
+    title: "ЖК «Кулик», г. Тула",
+    description: "Квартира 37 м². Капитальный ремонт жилого помещения. Начало работ — ноябрь 2026 г.",
+    image: undefined,
+    alt: "",
+    className: "project-in-progress",
+  },
 ];
 
 function BrandLogo() {
