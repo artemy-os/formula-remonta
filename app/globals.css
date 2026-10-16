@@ -437,6 +437,21 @@ h1 {
   line-height: 1.75;
 }
 
+.projects-group + .projects-group {
+  margin-top: 82px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.projects-group-title {
+  margin: 0 0 24px;
+  color: #5f5f5a;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -845,6 +860,11 @@ footer > span {
 
   .projects-copy {
     margin-top: 22px;
+  }
+
+  .projects-group + .projects-group {
+    margin-top: 58px;
+    padding-top: 24px;
   }
 
   .project-grid {
