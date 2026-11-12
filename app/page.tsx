@@ -74,14 +74,6 @@ const workTypes = [
 const currentProjects = [
   {
     category: "В РАБОТЕ",
-    title: "г. Истра — Загородный дом",
-    description: "Косметический ремонт загородного дома. Завершение текущих ремонтных работ. В настоящее время производится комплектация объекта. Фото и описания появятся по завершении работ.",
-    image: undefined,
-    alt: "",
-    className: "project-in-progress",
-  },
-  {
-    category: "В РАБОТЕ",
     title: "ЖК Новое Летово",
     description: "Капитальный ремонт жилого помещения, квартира 46 м², в процессе выполнения. Фотографии и подробности появятся после завершения этапов работ.",
     image: undefined,
@@ -106,7 +98,16 @@ const currentProjects = [
   },
 ];
 
-const completedProjects: typeof currentProjects = [];
+const completedProjects: typeof currentProjects = [
+  {
+    category: "ЗАВЕРШЁН",
+    title: "г. Истра — Загородный дом",
+    description: "Косметический ремонт загородного дома. Завершение текущих ремонтных работ, комплектация и финальная отделка интерьеров.",
+    image: undefined,
+    alt: "",
+    className: "project-in-progress",
+  },
+];
 
 function BrandLogo() {
   return (
@@ -242,7 +243,7 @@ export default function Home() {
             <h2 id="projects-title">Проекты</h2>
           </div>
           <p className="projects-copy">
-            Объекты, над которыми наша команда работает сейчас.
+            Текущие и завершённые объекты нашей команды.
           </p>
         </div>
         <div className="projects-group">
