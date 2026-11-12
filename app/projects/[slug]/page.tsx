@@ -1,7 +1,3 @@
-"use client";
-
-import { use, useState } from "react";
-
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const projects = [
   {slug:"istra", title:"г. Истра — Загородный дом", status:"Завершён", kind:"Загородный дом", description:"Косметический ремонт загородного дома. Завершение текущих ремонтных работ, комплектация и финальная отделка интерьеров.", details:"Работы по завершению ремонта и комплектации загородного дома. В интерьере сочетаются натуральные фактуры, выразительные напольные покрытия, деревянная мебель и декоративное освещение.", images:[] as string[]},
@@ -12,9 +8,8 @@ const projects = [
 
 export function generateStaticParams() { return projects.map(({slug}) => ({slug})); }
 
-export default function ProjectPage({params}:{params:Promise<{slug:string}>}) {
-  const {slug} = use(params);
-  const [active, setActive] = useState(0);
+export default async function ProjectPage({params}:{params:Promise<{slug:string}>}) {
+  const {slug} = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) return <main className="project-detail"><a href={basePath + "/#projects"}>← К проектам</a><h1>Проект не найден</h1></main>;
   return <main className="project-detail">
@@ -30,13 +25,7 @@ export default function ProjectPage({params}:{params:Promise<{slug:string}>}) {
       <h2>О проекте</h2>
       <p>{project.details}</p>
       <h2>Фотографии</h2>
-      {project.images.length ? <div className="project-detail-gallery">
-        <button type="button" onClick={() => setActive((active + project.images.length - 1) % project.images.length)} aria-label="Предыдущее фото">←</button>
-        <img src={basePath + project.images[active]} alt={project.title + " — фото " + (active + 1)} />
-        <button type="button" onClick={() => setActive((active + 1) % project.images.length)} aria-label="Следующее фото">→</button>
-        <p>{active + 1} / {project.images.length}</p>
-        <div className="project-detail-thumbs">{project.images.map((src,i) => <button key={src} type="button" onClick={() => setActive(i)} aria-label={"Фото " + (i + 1)} aria-pressed={active===i}><img src={basePath + src} alt="" /></button>)}</div>
-      </div> : <p className="project-detail-empty">Фотогалерея готовится к публикации.</p>}
+      {project.images.length ? <div className="project-detail-gallery-grid">{project.images.map((src,i) => <a href={basePath + src} target="_blank" rel="noopener noreferrer" key={src}><img src={basePath + src} alt={project.title + " — фото " + (i + 1)} loading="lazy" /></a>)}</div> : <p className="project-detail-empty">Фотогалерея готовится к публикации.</p>}
       <a className="project-detail-back" href={basePath + "/#projects"}>← Вернуться ко всем проектам</a>
     </div>
   </main>;
