@@ -71,7 +71,7 @@ const workTypes = [
   },
 ];
 
-const currentProjects = [
+const currentProjects: { slug: string; category: string; title: string; description: string; image?: string; alt: string; className: string }[] = [
   {
     slug: "novoe-letovo",
     category: "В РАБОТЕ",
@@ -85,10 +85,10 @@ const currentProjects = [
     slug: "luna",
     category: "В РАБОТЕ",
     title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
-    description: "Косметический ремонт коммерческого помещения рядом с метро «Курская». Фотографии и подробности появятся после завершения этапов работ.",
-    image: undefined,
-    alt: "",
-    className: "project-in-progress project-in-progress-accent",
+    description: "Косметический ремонт коммерческого помещения рядом с метро «Курская».",
+    image: "/images/luna/interior.jpg",
+    alt: "Интерьер бьюти-бутика ЛУНА в БЦ АРМА",
+    className: "",
   },
   {
     slug: "kulik-tula",
