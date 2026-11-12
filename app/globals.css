@@ -148,10 +148,10 @@ p {
 
 h1 {
   margin-bottom: 30px;
-  font-size: clamp(52px, 6.2vw, 102px);
-  line-height: .96;
-  font-weight: 510;
-  letter-spacing: -.055em;
+  font-size: clamp(38px, 4.5vw, 74px);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -.025em;
 }
 
 .hero-copy {
@@ -767,7 +767,7 @@ footer > span {
   }
 
   h1 {
-    font-size: clamp(42px, 13vw, 64px);
+    font-size: clamp(30px, 9.5vw, 44px);
   }
 
   .hero-copy {
