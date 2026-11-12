@@ -270,7 +270,7 @@ export default function Home() {
           <h3 className="projects-group-title">Завершённые</h3>
           <div className="project-grid">
             {completedProjects.map((project) => (
-              <article className={`project-card ${project.className ?? ""}`} key={project.title}>
+              <a href={assetPath(`/projects/${project.slug}/`)} aria-label={`Подробнее о проекте ${project.title}`} className={`project-card ${project.className ?? ""}`} key={project.title}>
                 {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
                 <div className="project-overlay">
                   <p>{project.category}</p>
