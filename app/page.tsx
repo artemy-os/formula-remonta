@@ -101,15 +101,15 @@ const currentProjects = [
   },
 ];
 
-const completedProjects: typeof currentProjects = [
+const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { image?: string })[] = [
   {
     slug: "istra",
     category: "ЗАВЕРШЁН",
     title: "г. Истра — Загородный дом",
     description: "Косметический ремонт загородного дома. Завершение текущих ремонтных работ, комплектация и финальная отделка интерьеров.",
-    image: undefined,
-    alt: "",
-    className: "project-in-progress",
+    image: "/images/istra/living-room.jpeg",
+    alt: "Гостиная и кухня загородного дома в Истре после ремонта",
+    className: "",
   },
 ];
 
