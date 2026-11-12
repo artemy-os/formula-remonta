@@ -5,4 +5,6 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://master-rem.com/news/</loc></url>
+  <url><loc>https://master-rem.com/news/rozetka-v-polu/</loc></url>
 </urlset>
