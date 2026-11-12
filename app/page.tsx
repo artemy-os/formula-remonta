@@ -73,6 +73,7 @@ const workTypes = [
 
 const currentProjects = [
   {
+    slug: "novoe-letovo",
     category: "В РАБОТЕ",
     title: "ЖК Новое Летово",
     description: "Капитальный ремонт жилого помещения, квартира 46 м², в процессе выполнения. Фотографии и подробности появятся после завершения этапов работ.",
@@ -81,6 +82,7 @@ const currentProjects = [
     className: "project-in-progress",
   },
   {
+    slug: "luna",
     category: "В РАБОТЕ",
     title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
     description: "Косметический ремонт коммерческого помещения рядом с метро «Курская». Фотографии и подробности появятся после завершения этапов работ.",
@@ -89,6 +91,7 @@ const currentProjects = [
     className: "project-in-progress project-in-progress-accent",
   },
   {
+    slug: "kulik-tula",
     category: "В РАБОТЕ",
     title: "ЖК «Кулик», г. Тула",
     description: "Квартира 37 м². Капитальный ремонт жилого помещения. Начало работ — ноябрь 2026 г.",
@@ -100,6 +103,7 @@ const currentProjects = [
 
 const completedProjects: typeof currentProjects = [
   {
+    slug: "istra",
     category: "ЗАВЕРШЁН",
     title: "г. Истра — Загородный дом",
     description: "Косметический ремонт загородного дома. Завершение текущих ремонтных работ, комплектация и финальная отделка интерьеров.",
@@ -250,14 +254,14 @@ export default function Home() {
           <h3 className="projects-group-title">В работе</h3>
           <div className="project-grid">
             {currentProjects.map((project) => (
-              <article className={`project-card ${project.className ?? ""}`} key={project.title}>
+              <a href={assetPath(`/projects/${project.slug}/`)} aria-label={`Подробнее о проекте ${project.title}`} className={`project-card ${project.className ?? ""}`} key={project.title}>
                 {project.image && <img src={assetPath(project.image)} alt={project.alt} />}
                 <div className="project-overlay">
                   <p>{project.category}</p>
                   <h3>{project.title}</h3>
                   <span>{project.description}</span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
@@ -273,7 +277,7 @@ export default function Home() {
                   <h3>{project.title}</h3>
                   <span>{project.description}</span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
