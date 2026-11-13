@@ -981,6 +981,11 @@ footer > span {
 @media(max-width:760px) { .news-card { grid-template-columns:1fr; } .news-card-photo img { height:300px; } .news-section-heading { align-items:start; flex-direction:column; gap:8px; } .journal-header { padding:22px; align-items:start; flex-direction:column; } .journal-header img { width:190px; } .journal-main { padding:40px 22px 60px; } .journal-footer { flex-wrap:wrap; padding:26px 22px; } .article-body h2 { font-size:23px; } .article-body p { font-size:17px; } }
 @media(prefers-reduced-motion:reduce) { .news-card-photo img { transition:none; } }
 
-.project-brand-cover { background:#fff; }
-.project-brand-cover img { object-fit:contain; height:58%; padding:24px; }
-.project-brand-cover .project-overlay { background:#292925; padding:22px 24px; }
+.project-card.project-brand-cover { display:flex; flex-direction:column; background:#fff; height:auto; min-height:330px; }
+.project-brand-cover img { flex:none; width:100%; height:auto; aspect-ratio:1.9; object-fit:contain; padding:24px; }
+.project-brand-cover .project-overlay { position:static; flex:1; background:#292925; padding:22px 24px; }
+@media(max-width:760px) {
+  .project-card.project-brand-cover { height:auto; align-self:flex-start; }
+  .project-brand-cover .project-overlay h3 { font-size:21px; line-height:1.3; }
+  .project-brand-cover .project-overlay span { font-size:12px; line-height:1.6; }
+}
