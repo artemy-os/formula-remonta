@@ -104,6 +104,14 @@ const currentProjects: { slug: string; category: string; title: string; descript
 
 const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { image?: string })[] = [
   {
+    slug: "goga-nikabadze",
+    category: "ЗАВЕРШЁН",
+    title: "Goga Nikabadze — Бутик, Винзавод",
+    description: "Завершённый проект бутика Goga Nikabadze на Винзаводе.",
+    alt: "",
+    className: "project-in-progress project-in-progress-accent",
+  },
+  {
     slug: "istra",
     category: "ЗАВЕРШЁН",
     title: "г. Истра — Загородный дом",
