@@ -116,8 +116,9 @@ const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { im
     category: "ЗАВЕРШЁН · 09.2025",
     title: "Goga Nikabadze — Бутик, Винзавод",
     description: "Косметический ремонт бутика Goga Nikabadze на Винзаводе.",
-    alt: "",
-    className: "project-in-progress project-in-progress-accent",
+    image: "/images/goga-nikabadze/interior.jpg",
+    alt: "Интерьер бутика Goga Nikabadze на Винзаводе",
+    className: "",
   },
   {
     slug: "istra",
