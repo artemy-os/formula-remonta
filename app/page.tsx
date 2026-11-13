@@ -299,6 +299,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <p style={{ marginTop: "40px", paddingTop: "28px", borderTop: "1px solid #d7d7d3", maxWidth: "850px", color: "#555", fontSize: "16px", lineHeight: 1.75 }}>Мастерская ремонта непрерывно осуществляет сервисное и техническое обслуживание рабочего пространства наших клиентов.</p>
       </section>
 
       <section className="section process" id="process">
