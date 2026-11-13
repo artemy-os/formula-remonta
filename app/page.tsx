@@ -105,15 +105,15 @@ const currentProjects: { slug: string; category: string; title: string; descript
 const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { image?: string })[] = [
   {
     slug: "goga-nikabadze",
-    category: "ЗАВЕРШЁН",
+    category: "ЗАВЕРШЁН · 09.2025",
     title: "Goga Nikabadze — Бутик, Винзавод",
-    description: "Завершённый проект бутика Goga Nikabadze на Винзаводе.",
+    description: "Косметический ремонт бутика Goga Nikabadze на Винзаводе.",
     alt: "",
     className: "project-in-progress project-in-progress-accent",
   },
   {
     slug: "istra",
-    category: "ЗАВЕРШЁН",
+    category: "ЗАВЕРШЁН · 11.2026",
     title: "г. Истра — Загородный дом",
     description: "Косметический ремонт загородного дома. Завершение текущих ремонтных работ, комплектация и финальная отделка интерьеров.",
     image: "/images/istra/living-room.jpeg",
