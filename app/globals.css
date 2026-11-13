@@ -980,3 +980,7 @@ footer > span {
 @media(max-width:1250px) and (min-width:761px) { .site-header { gap:20px; grid-template-columns:200px 1fr; } .site-header .brand-original { width:200px; } .nav { gap:16px; } .site-header .header-cta { display:none; } }
 @media(max-width:760px) { .news-card { grid-template-columns:1fr; } .news-card-photo img { height:300px; } .news-section-heading { align-items:start; flex-direction:column; gap:8px; } .journal-header { padding:22px; align-items:start; flex-direction:column; } .journal-header img { width:190px; } .journal-main { padding:40px 22px 60px; } .journal-footer { flex-wrap:wrap; padding:26px 22px; } .article-body h2 { font-size:23px; } .article-body p { font-size:17px; } }
 @media(prefers-reduced-motion:reduce) { .news-card-photo img { transition:none; } }
+
+.project-brand-cover { background:#fff; }
+.project-brand-cover img { object-fit:contain; height:58%; padding:24px; }
+.project-brand-cover .project-overlay { background:#292925; padding:22px 24px; }

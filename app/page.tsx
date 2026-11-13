@@ -107,9 +107,10 @@ const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { im
     slug: "bessovestno-talantlivy",
     category: "ЗАВЕРШЁН · 2019",
     title: "Университет «Бессовестно Талантливый» — БЦ Арма",
-    description: "Завершённый проект университета «Бессовестно Талантливый» в БЦ Арма.",
-    alt: "",
-    className: "project-in-progress",
+    description: "«Университет Бессовестно Талантливый» — это флагманский образовательный проект и площадка для повышения квалификации мастеров бьюти-индустрии.",
+    image: "/images/university/logo.jpg",
+    alt: "Логотип Университета Бессовестно Талантливый",
+    className: "project-brand-cover",
   },
   {
     slug: "goga-nikabadze",
