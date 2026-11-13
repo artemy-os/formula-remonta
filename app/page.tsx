@@ -104,6 +104,14 @@ const currentProjects: { slug: string; category: string; title: string; descript
 
 const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { image?: string })[] = [
   {
+    slug: "bessovestno-talantlivy",
+    category: "ЗАВЕРШЁН · 2019",
+    title: "Университет «Бессовестно Талантливый» — БЦ Арма",
+    description: "Завершённый проект университета «Бессовестно Талантливый» в БЦ Арма.",
+    alt: "",
+    className: "project-in-progress",
+  },
+  {
     slug: "goga-nikabadze",
     category: "ЗАВЕРШЁН · 09.2025",
     title: "Goga Nikabadze — Бутик, Винзавод",
