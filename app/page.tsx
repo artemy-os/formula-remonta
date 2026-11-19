@@ -190,7 +190,7 @@ export default function Home() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
-              <i>↗</i>
+              <i aria-hidden="true"><svg viewBox="0 0 270 210" width="1em" height="1em" style={{display:"block"}}><path fill="currentColor" d="M0 70h52v96h218v44H0zM78 0h52v146H78z"/><path fill="#B29370" d="M198 18h72v72h-72z"/></svg></i>
             </article>
           ))}
         </div>
