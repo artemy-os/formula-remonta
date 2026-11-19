@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="500" viewBox="0 0 640 500"><rect width="640" height="500" fill="#f2efe9"/><defs><filter id="shadow" x="-25%" y="-25%" width="150%" height="155%" color-interpolation-filters="sRGB"><feDropShadow dx="10" dy="14" stdDeviation="10" flood-color="#443c31" flood-opacity=".23"/></filter><linearGradient id="surface" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#faf8f3"/><stop offset="1" stop-color="#c9bdab"/></linearGradient></defs><g filter="url(#shadow)"><g transform="translate(6 8)"><g fill="none" stroke="#8a7965" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M180 380V150h200v230m-200-45h200m-30-100h10m50 145h70V260h-70m-170-80h140"/></g></g><g fill="none" stroke="#343430" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path fill="url(#surface)" stroke="none" d="M180 380V150h200v230zM410 380h70V260h-70z"/><path d="M180 380V150h200v230m-200-45h200m-30-100h10m50 145h70V260h-70m-170-80h140"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="500" viewBox="0 0 640 500">
+ <defs>
+  <linearGradient id="wood" x2="100%" y2="100%"><stop stop-color="#faf8f3"/><stop offset="1" stop-color="#c9bdab"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="165%" height="170%"><feDropShadow dx="7" dy="10" stdDeviation="8" flood-color="#443c31" flood-opacity=".21"/></filter>
+ </defs>
+ <rect width="640" height="500" fill="#f2efe9"/>
+ <g filter="url(#shadow)" stroke="#343430" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+  <path fill="#a2917d" d="M305 167l14 10v211l-14-10z"/>
+  <rect x="170" y="167" width="135" height="211" rx="3" fill="url(#wood)"/>
+  <rect x="184" y="181" width="107" height="183" rx="2" fill="none" stroke="#8a7965" stroke-width="3"/>
+  <path d="M272 277h13" fill="none"/>
+  <path d="M389 88h42m-21 0v50" fill="none"/>
+  <path d="M390 138h40l25 40h-90z" fill="url(#wood)"/>
+  <path d="M367 178q43 12 86 0" fill="#ead5a9"/>
+  <path d="M352 286l19-12h117l-19 12z" fill="#faf8f3"/>
+  <path d="M352 286h117l19-12v13l-19 12H352z" fill="#b4a38d"/>
+  <path d="M469 286v13" fill="none"/>
+ </g>
+</svg>
