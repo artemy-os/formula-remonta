@@ -328,12 +328,13 @@ export default function Home() {
           <h2 id="clients-title">Наши клиенты</h2>
         </div>
         {clients.length ? (
-          <ul style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 200px), 1fr))", gap: "16px", padding: 0, margin: 0, listStyle: "none" }}>
+          <ul style={{ display: "flex", flexWrap: "wrap", gap: "clamp(8px, 2vw, 24px)", padding: 0, margin: 0, listStyle: "none" }}>
             {clients.map(({ name, logo, href }) => (
-              <li key={name}><a href={href} style={{ display: "grid", placeItems: "center", alignContent: "center", gap: "16px", minHeight: "152px", padding: "24px", textAlign: "center", border: "1px solid var(--line)" }}>
-                {logo && <img src={assetPath(logo)} alt="" loading="lazy" style={{ width: "100%", maxWidth: "160px", height: "64px", objectFit: "contain" }} />}
-                <strong>{name}</strong>
-              </a></li>
+              <li key={name}>
+                <a href={href} aria-label={name} title={name} style={{ display: "grid", placeItems: "center", width: "clamp(52px, 17vw, 112px)", height: "52px" }}>
+                  {logo ? <img src={assetPath(logo)} alt="" loading="lazy" style={{ width: "100%", height: "44px", objectFit: "contain" }} /> : name}
+                </a>
+              </li>
             ))}
           </ul>
         ) : (
