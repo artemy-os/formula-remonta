@@ -1022,3 +1022,14 @@ footer > span {
 .work-detail-nav a { border:1px solid #ddd; padding:14px; font-size:18px; font-weight:700; line-height:1.35; max-width:100%; }
 .work-detail-nav a[aria-current] { background:#292925; color:white; }
 @media(max-width:760px) { .work-detail-body { padding:40px 22px; } .work-detail-hero,.work-detail-list ul { grid-template-columns:1fr; } .work-type-card.work-type-link { display:block; } .work-type-illustration { margin-top:20px; height:150px; } }
+
+.work-type-card > span,
+.work-detail-hero .eyebrow { font-size: 14px; color: #595953; }
+.work-types-head > p,
+.work-type-card li,
+.work-detail-hero p:not(.eyebrow),
+.work-detail-list > p,
+.work-detail-list li { font-size: 17px; line-height: 1.6; color: #4f4f49; }
+.work-more,
+.work-detail .project-detail-header a:last-child { font-size: 16px; font-weight: 600; }
+.work-brand-icon { display: inline-block; vertical-align: -0.12em; }

@@ -218,7 +218,7 @@ export default function Home() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            <p className="work-more">Подробный перечень ↗</p></a>
+            <p className="work-more">Подробный перечень{" "}<svg className="work-brand-icon" aria-hidden="true" viewBox="0 0 270 210" width="16" height="16"><path fill="currentColor" d="M0 70h52v96h218v44H0zM78 0h52v146H78z"/><path fill="#B29370" d="M198 18h72v72h-72z"/></svg></p></a>
           ))}
         </div>
       </section>
