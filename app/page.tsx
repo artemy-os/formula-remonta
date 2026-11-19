@@ -306,10 +306,6 @@ export default function Home() {
 
       <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">ЖУРНАЛ МАСТЕРСКОЙ</p><h2>Новости и практика</h2></div><a className="news-read" href={assetPath("/news/")}>Все публикации ↗</a></div><NewsCards limit={3} /></section>
 
-      <section className="visual-showcase">
-        <img src={assetPath("/images/project-bathroom-finished.png")} alt="Интерьер ванной комнаты с декоративной штукатуркой, линейным сливным трапом и ванной с переливом" />
-      </section>
-
       <section className="estimate" aria-labelledby="consultation-title">
         <div className="estimate-intro">
           <p className="eyebrow">ПЛАНИРОВАНИЕ РЕМОНТА</p>
