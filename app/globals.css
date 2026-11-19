@@ -1019,6 +1019,6 @@ footer > span {
 .work-detail-list ul { padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
 .work-detail-list li { padding:18px 0; border-top:1px solid #ddd; line-height:1.6; }
 .work-detail-nav { display:flex; flex-wrap:wrap; gap:12px; }
-.work-detail-nav a { border:1px solid #ddd; padding:14px; font-size:14px; }
+.work-detail-nav a { border:1px solid #ddd; padding:14px; font-size:18px; font-weight:700; line-height:1.35; max-width:100%; }
 .work-detail-nav a[aria-current] { background:#292925; color:white; }
 @media(max-width:760px) { .work-detail-body { padding:40px 22px; } .work-detail-hero,.work-detail-list ul { grid-template-columns:1fr; } .work-type-card.work-type-link { display:block; } .work-type-illustration { margin-top:20px; height:150px; } }
