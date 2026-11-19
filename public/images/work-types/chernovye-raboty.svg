@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="500" viewBox="0 0 640 500">
-  <rect width="640" height="500" fill="#f2efe9"/>
-  <g stroke="#343430" stroke-width="7" stroke-linejoin="round">
+  <rect width="640" height="500" fill="#f2efe9"/><defs><filter id="shadow" x="-25%" y="-25%" width="150%" height="155%" color-interpolation-filters="sRGB"><feDropShadow dx="10" dy="14" stdDeviation="10" flood-color="#443c31" flood-opacity=".23"/></filter><linearGradient id="surface" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#faf8f3"/><stop offset="1" stop-color="#c9bdab"/></linearGradient></defs>
+  <g filter="url(#shadow)" stroke="#343430" stroke-width="7" stroke-linejoin="round">
     <path fill="#ebe7df" d="M148 139l218 83v171l-218-83z"/>
     <path fill="#d6d1c7" d="M366 222l126-69v171l-126 69z"/>
     <path fill="#faf8f3" d="M148 139l25-14 191 73 102-56 26 11-126 69z"/>
