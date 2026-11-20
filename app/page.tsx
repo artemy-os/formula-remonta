@@ -304,7 +304,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">ЖУРНАЛ МАСТЕРСКОЙ</p><h2>Новости и практика</h2></div><a className="news-read" href={assetPath("/news/")}>Все публикации ↗</a></div><NewsCards limit={3} /></section>
+      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">ЖУРНАЛ МАСТЕРСКОЙ</p><h2>Строительные будни 👷</h2></div><a className="news-read" href={assetPath("/news/")}>Все публикации ↗</a></div><NewsCards limit={3} /></section>
 
       <section className="estimate" aria-labelledby="consultation-title">
         <div className="estimate-intro">
@@ -348,7 +348,7 @@ export default function Home() {
         <div>
           <a href="#services">Услуги</a>
           <a href="#projects">Проекты</a>
-          <a href={assetPath("/news/")}>Новости и практика</a>
+          <a href={assetPath("/news/")}>Строительные будни 👷</a>
         </div>
         <span>© 2026 Мастерская ремонта</span>
       </footer>
