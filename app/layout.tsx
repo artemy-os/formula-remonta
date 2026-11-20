@@ -35,8 +35,8 @@ export const metadata: Metadata = {
       "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
   },
   icons: {
-    icon: `${basePath}/favicon.svg`,
-    shortcut: `${basePath}/favicon.svg`,
+    icon: `${basePath}/workshop-icon.svg`,
+    shortcut: `${basePath}/workshop-icon.svg`,
   },
 };
 
