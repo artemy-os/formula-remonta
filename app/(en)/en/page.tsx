@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import LanguageSwitch from "../../LanguageSwitch";
+import JournalTitle from "../../JournalTitle";
 import NewsCards from "./news/NewsCards";
 import { workTypes } from "./work-types/data";
 
@@ -306,7 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">THE WORKSHOP BLOG</p><h2>Building & Renovation 👷</h2></div><a className="news-read" href={assetPath("/en/news/")}>All articles ↗</a></div><NewsCards limit={3} /></section>
+      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">THE WORKSHOP BLOG</p><JournalTitle level="h2" english /></div><a className="news-read" href={assetPath("/en/news/")}>All articles ↗</a></div><NewsCards limit={3} /></section>
 
       <section className="estimate" aria-labelledby="consultation-title">
         <div className="estimate-intro">
