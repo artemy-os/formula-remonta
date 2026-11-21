@@ -4,8 +4,28 @@
   <path d="M405 150h369v298H405z" fill="#e3ded4" stroke="#302e2a" stroke-width="6"/>
   <path d="M533 151v122q0 32 32 32h209" fill="none" stroke="#b49771" stroke-width="27"/>
   <path d="M667 448V235q0-27 27-27h80" fill="none" stroke="#55524e" stroke-width="11"/>
-  <path d="M180 293h108l36 28v31l-35 24h-65l-11 63h-46l13-88z" fill="#302e2a"/>
-  <path d="M317 336h78" stroke="#302e2a" stroke-width="10" stroke-linecap="round"/>
+  <g stroke-linejoin="round">
+    <!-- Motor housing and rubber bumpers -->
+    <path d="M155 314q0-22 21-27l19-6h84q19 0 28 14l11 19v44l-13 12h-78l-12 69h-43l10-72h-10q-17-2-17-18z" fill="#b49771" stroke="#302e2a" stroke-width="5"/>
+    <path d="M155 314q0-15 12-21v68q-12-4-12-15z" fill="#302e2a"/>
+    <path d="M175 299h92" stroke="#e6d5bc" stroke-width="4" stroke-linecap="round"/>
+    <path d="M185 311h33m-33 8h33m-33 8h33" stroke="#574b3b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M262 345h28" stroke="#faf9f5" stroke-width="4" stroke-linecap="round"/>
+    <!-- Grip, trigger and battery -->
+    <path d="M182 365h44l-12 75h-43z" fill="#393631" stroke="#302e2a" stroke-width="4"/>
+    <path d="M225 368h22v13q0 9-10 9h-15z" fill="#302e2a"/>
+    <path d="M181 403l28 4m-30 7 28 4m-30 7 28 4" stroke="#726b60" stroke-width="3" stroke-linecap="round"/>
+    <rect x="155" y="435" width="76" height="14" rx="5" fill="#b49771" stroke="#302e2a" stroke-width="4"/>
+    <rect x="148" y="446" width="91" height="21" rx="5" fill="#302e2a"/>
+    <path d="M153 461h81" stroke="#55524e" stroke-width="3"/>
+    <!-- Clutch collar, chuck and fluted bit on the same axis -->
+    <path d="M304 312h22v48h-22z" fill="#5e5950" stroke="#302e2a" stroke-width="4"/>
+    <path d="M310 316v40m8-40v40" stroke="#999183" stroke-width="2"/>
+    <path d="M326 318h14l14 9v18l-14 9h-14z" fill="#302e2a"/>
+    <path d="M332 324h7m-7 6h12m-12 6h12m-12 6h12m-12 6h7" stroke="#827b71" stroke-width="2"/>
+    <path d="M352 332h39l9 4-9 4h-39z" fill="#605e59"/>
+    <path d="M360 332l7 8m2-8 7 8m2-8 7 8m2-8 7 7" stroke="#d1ccc2" stroke-width="2"/>
+  </g>
   <path d="M420 336h65" stroke="#9c8670" stroke-width="4" stroke-dasharray="8 9"/>
   <circle cx="485" cy="336" r="26" fill="none" stroke="#9c8670" stroke-width="4"/>
 </svg>
