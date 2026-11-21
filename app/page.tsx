@@ -181,6 +181,7 @@ export default function Home() {
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "12px 28px" }}>
               <a className="text-link light-link" href="#process">Как мы работаем <span>↓</span></a>
               <a className="text-link light-link" href={assetPath("/news/")}>Блог</a>
+              <a className="text-link light-link" href="#projects">Проекты</a>
             </div>
           </div>
         </div>
