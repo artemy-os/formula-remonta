@@ -12,9 +12,9 @@ export default function BlogPage() {
   return <main className="journal-main">
     <div className="journal-intro">
       <p className="eyebrow">THE WORKSHOP BLOG</p>
-      <div style={{display:"flex", alignItems:"flex-end", gap:".25rem"}}>
+      <div className="journal-title">
         <h1>Building &amp; Renovation</h1>
-        <img src={base + "/images/worker_small.webp"} alt="" width={76} height={114} style={{width:"clamp(46px,10vw,76px)",height:"auto",flexShrink:0}} />
+        <img src={base + "/images/worker_small.webp"} alt="" width={105} height={179} />
       </div>
       <p>Materials, tools and practical ideas for creating comfortable spaces. We explain renovation through real examples.</p>
     </div>
