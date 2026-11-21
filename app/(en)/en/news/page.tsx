@@ -13,8 +13,7 @@ export default function BlogPage() {
     <div className="journal-intro">
       <p className="eyebrow">THE WORKSHOP BLOG</p>
       <div className="journal-title">
-        <h1>Building &amp; Renovation</h1>
-        <img src={base + "/images/worker_small.webp"} alt="" width={105} height={179} />
+        <h1>Building &amp;<br /> <span className="journal-title-word">Renovation<img src={base + "/images/worker_small.webp"} alt="" width={105} height={179} /></span></h1>
       </div>
       <p>Materials, tools and practical ideas for creating comfortable spaces. We explain renovation through real examples.</p>
     </div>
