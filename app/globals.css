@@ -964,6 +964,8 @@ footer > span {
 .journal-title { margin:14px 0 18px; }
 .journal .journal-title h1 { margin:0; }
 .journal-title-word { display:inline-block; position:relative; white-space:nowrap; padding-inline-end:1.18em; padding-bottom:.54em; }
+.journal-title:has(.journal-title-word-first) { margin-top:clamp(32px,5vw,58px); }
+.journal-title-word-first { padding-bottom:0; }
 .journal-title img { position:absolute; inset-inline-end:0; top:-.94em; width:1.5em; height:auto; pointer-events:none; clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 66%, 40% 66%, 40% 45%, 0 45%); }
 .journal h1 { font-size:clamp(34px,4.6vw,60px); letter-spacing:-.04em; font-weight:650; line-height:1.12; margin:20px 0 24px; }
 .journal-intro>p:last-child,.article-heading>p { color:#45423d; font-size:20px; font-weight:500; line-height:1.7; }
