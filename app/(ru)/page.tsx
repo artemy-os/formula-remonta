@@ -180,7 +180,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="#services">Наши услуги</a>
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "12px 28px" }}>
+            <div className="hero-links">
               <a className="text-link light-link" href="#process">Как мы работаем <span>↓</span></a>
               <a className="text-link light-link" href={assetPath("/news/")}>Блог</a>
               <a className="text-link light-link" href="#projects">Проекты</a>

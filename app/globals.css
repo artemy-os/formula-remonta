@@ -213,6 +213,26 @@ h1 {
   border-bottom: 1px solid currentColor;
 }
 
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px clamp(14px, 3vw, 28px);
+}
+
+.hero-links .text-link {
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding-block: 3px 5px;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  text-shadow: 0 1px 5px rgb(0 0 0 / 80%);
+}
+
 .light-link {
   color: white;
 }
