@@ -11,6 +11,35 @@ type Translation = {
 };
 
 const translations: Record<string, Translation> = {
+  "kak-ne-prosverlit-trubu-ili-kabel": {
+    "title": "How to avoid drilling into a pipe or cable during renovation",
+    "category": "Renovation in practice",
+    "imageAlt": "Illustration of a drill bit and hidden utilities in a wall",
+    "excerpt": "Even a shallow hole can damage a pipe or cable. Here’s how to check the wall, choose a fixing point and limit drilling depth.",
+    "sections": [
+      [
+        "Inspect both sides of the wall",
+        "Sockets, switches and the distribution board suggest where to look for wiring. Taps, outlets and risers can help you trace pipes. Check whether the adjoining room is a kitchen or bathroom. Do not assume a cable runs straight up from a socket: one visible fitting does not tell you the full route."
+      ],
+      [
+        "Check plans or photos taken before finishing",
+        "Measure from fixed points you can still see, such as a wall corner, doorway or pipe outlet. If work is ongoing, photograph pipes and wiring before they are covered and record distances to those points. That gives you a reference when fitting furniture later."
+      ],
+      [
+        "Scan every fixing point",
+        "For polypropylene, use a scanner rated to detect water-filled plastic pipes. For wiring, check whether your device can detect cables that are not live. A live-wire mode alone will miss them. Scan the whole fixing area in two directions. A clear reading is not proof that the wall is empty: results depend on depth, wall material and layers."
+      ],
+      [
+        "Limit the depth and never drill on a guess",
+        "After checking the location, set the depth stop to the depth specified for the fixing. Isolate any circuits that could run through the area before drilling. Switching off a breaker does not replace checking the route: an incoming supply cable can remain live even when the main switch is off. If the route is uncertain, move the fixing or ask a professional to check the wall."
+      ],
+      [
+        "If you strike a pipe or cable",
+        "Stop work immediately. If you hit a pipe, shut off the water if you can reach the valve safely. If you suspect you struck a cable, do not touch the bit or metal parts of the tool. Switch off power if you can safely reach the distribution board, and call an electrician. Do not reset a tripped breaker until the cable has been checked. Keep clear of any electrical equipment or sockets that got wet."
+      ]
+    ],
+    "source": "Bosch Professional — what the wall scanner can detect"
+  },
   "remont-otverstiya-ppr-truby": {
     title: "How to repair a polypropylene pipe you accidentally drilled through",
     subtitle: "Repairing a pipe in a hard-to-reach spot",
@@ -93,7 +122,7 @@ export const articles = original.flatMap((article) => {
   return [{
     ...article,
     ...copy,
-    image: article.image.endsWith(".svg") ? article.image.replace(/\.svg$/, "-en.svg") : article.image,
+    image: article.image.endsWith(".svg") && article.slug !== "kak-ne-prosverlit-trubu-ili-kabel" ? article.image.replace(/\.svg$/, "-en.svg") : article.image,
     dateLabel: new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" }).format(new Date(article.date)),
     readingTime: (parseInt(article.readingTime, 10) || 3) + " min read",
     sections: copy.sections.map(([title, text]) => ({ title, text })),
