@@ -73,15 +73,6 @@ const currentProjects: { slug: string; category: string; title: string; descript
     className: "project-in-progress",
   },
   {
-    slug: "luna",
-    category: "В РАБОТЕ",
-    title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
-    description: "Косметический ремонт коммерческого помещения рядом с метро «Курская».",
-    image: "/images/luna/interior.jpg",
-    alt: "Интерьер бьюти-бутика ЛУНА в БЦ АРМА",
-    className: "",
-  },
-  {
     slug: "kulik-tula",
     category: "В РАБОТЕ",
     title: "ЖК «Кулик», г. Тула",
@@ -93,6 +84,15 @@ const currentProjects: { slug: string; category: string; title: string; descript
 ];
 
 const completedProjects: (Omit<(typeof currentProjects)[number], "image"> & { image?: string })[] = [
+  {
+    slug: "luna",
+    category: "ЗАВЕРШЁН",
+    title: "БЦ АРМА — бьюти-бутик «ЛУНА»",
+    description: "Косметический ремонт коммерческого помещения рядом с метро «Курская».",
+    image: "/images/luna/interior.jpg",
+    alt: "Интерьер бьюти-бутика ЛУНА в БЦ АРМА",
+    className: "",
+  },
   {
     slug: "bessovestno-talantlivy",
     category: "ЗАВЕРШЁН · 2019",
