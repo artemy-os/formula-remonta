@@ -1080,3 +1080,8 @@ footer > span {
   .site-header .header-actions { grid-column:2; grid-row:1; }
   .site-header .menu-button { grid-column:3; grid-row:1; }
 }
+
+.journal-link-mark { display:inline-block; width:1em; height:1em; vertical-align:-.12em; }
+.journal-archive-month { display:block; list-style:none; }
+.journal-archive-month::-webkit-details-marker { display:none; }
+details[open] > .journal-archive-month { text-decoration:underline; text-underline-offset:.2em; }

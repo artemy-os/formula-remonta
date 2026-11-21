@@ -1,4 +1,5 @@
 "use client";
+import WorkshopMark from "../../WorkshopMark";
 
 import { useState } from "react";
 import LanguageSwitch from "../../LanguageSwitch";
@@ -307,7 +308,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">THE WORKSHOP BLOG</p><JournalTitle level="h2" english /></div><a className="news-read" href={assetPath("/en/news/")}>All articles ↗</a></div><NewsCards limit={3} /></section>
+      <section className="section news-home" id="news"><div className="news-section-heading"><div><p className="eyebrow">THE WORKSHOP BLOG</p><JournalTitle level="h2" english /></div><a className="news-read" href={assetPath("/en/news/")}>All articles <WorkshopMark /></a></div><NewsCards limit={3} /></section>
 
       <section className="estimate" aria-labelledby="consultation-title">
         <div className="estimate-intro">

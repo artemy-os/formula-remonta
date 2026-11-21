@@ -1,3 +1,4 @@
+import WorkshopMark from "../../../WorkshopMark";
 const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
@@ -7,6 +8,6 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
       <nav aria-label="Blog navigation"><a href={base + "/en/#projects"}>Projects</a><a href={base + "/en/news/"}>Blog</a><a href={base + "/news/"} hrefLang="ru" lang="ru">Русский</a></nav>
     </header>
     {children}
-    <footer className="journal-footer"><a href={base + "/en/"}>← Home</a><span>© 2026 Masterskaya Remonta</span></footer>
+    <footer className="journal-footer"><a href={base + "/en/"}><WorkshopMark /> Home</a><span>© 2026 Masterskaya Remonta</span></footer>
   </div>;
 }
