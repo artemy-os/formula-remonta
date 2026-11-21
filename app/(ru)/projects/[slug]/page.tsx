@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const projects = [
   {slug:"bessovestno-talantlivy", completedAt:"2019 г.", title:"Университет «Бессовестно Талантливый» — БЦ Арма", status:"Завершён", kind:"Образовательное пространство", description:"«Университет Бессовестно Талантливый» — это флагманский образовательный проект и площадка для повышения квалификации мастеров бьюти-индустрии.", details:"Проект в БЦ Арма. Завершён в 2019 году.", images:["/images/university/logo.jpg"]},
@@ -9,6 +10,14 @@ const projects = [
 ];
 
 export function generateStaticParams() { return projects.map(({slug}) => ({slug})); }
+
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}): Promise<Metadata> {
+  const {slug} = await params;
+  const project = projects.find(item => item.slug === slug);
+  if (!project) return {};
+  const ru = "/projects/" + slug + "/", en = "/en" + ru;
+  return {title: project.title + " — Мастерская ремонта", description: project.description, alternates: {canonical: ru, languages: {ru, en}}};
+}
 
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}) {
   const {slug} = await params;

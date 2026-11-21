@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Дизайн, ремонт и комплектация квартир и домов в Москве и Московской области.",
   alternates: {
     canonical: "/",
+    languages: { ru: "/", en: "/en/", "x-default": "/" },
   },
   verification: {
     google: "yuZfCzxh245KEXnwyAMIRlIlH3vCloNjpt9J36WtIH0",
